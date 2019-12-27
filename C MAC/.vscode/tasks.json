@@ -1,0 +1,23 @@
+{            
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C To .EXE",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "${fileBasename}",
+                "-o",
+                "${fileBasenameNoExtension}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
