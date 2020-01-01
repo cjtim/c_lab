@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main() {
-    int tim = 18;
-    char name[] = "tim";
-    printf("hello, world\n%d\n%s\n" , tim , name);
-    char a[20];
+    char a[20]; 
+    //long long int ไม่เกิน 20 ตัวแน่ 
+    // ทดลอง 19 ตัวผ่าน 1234567890123456789
+    // ทดลอง 20 ตัว OVERFLOW
     gets(a);
     long long int b = atoll(a);
     int i;
