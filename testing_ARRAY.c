@@ -9,7 +9,7 @@ int main() {
     long long int b = atoll(a);
     int i;
     for(i = 0;i < sizeof(a);i++){
-        printf("print from for = %c\n",a[i]);
+        printf("print CHAR from for = %c\n",a[i]);
     }
     printf("int = %lld\n",b);
     return 0;
