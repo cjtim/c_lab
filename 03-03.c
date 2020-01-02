@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-    int i , max, a, b;
+    int i  , max, a, b;
     char a_str[20],b_str[20];
     fgets(a_str,20,stdin);
     fgets(b_str,20,stdin);
@@ -17,21 +17,22 @@ int main(){
     else if ( a == b){
         i = a;
     }
-    while (i >= 1 ){
-        if(a % i != 0 | b % i != 0){
-            i--;
-            //printf("plus i++ \n");
+
+    
+    while (1){
+        if (i <= 1){
+            break;
         }
-        while (a % i == 0 && b % i == 0){
+        while(a % i == 0 && b % i == 0){
             a = a / i;
             b = b / i;
-            i--;
-            //printf("a = %d\nb = %d \n",a,b);
+            //printf("a = %d b = %d\n",a,b);
         }
-        
-    }
+        i--;
+        //printf("i = %d\n",i);
+    }    
     if (b==1){
-        printf("= %d",a);
+        printf("= %d\n",a);
     }
     else{
         printf("= %d/%d\n",a,b);

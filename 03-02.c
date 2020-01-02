@@ -6,17 +6,22 @@ int main(){
     gets(n_str);
     long long m = atoll(m_str);
     long long n = atoll(n_str);
-    int i,gcd,lcm;
-    i = 2;
-    // GCD
-    for (i = 1; i <= m && i <= n; ++i) {
-        
-        // check if i is a factor of both integers
-        if (m % i == 0 && n % i == 0)
-            gcd = i;
+    int i,gcd,a,b,c;
+    long long int lcm;
+    a = m;
+    b = n;
+    //Calculate GCD
+    c = a % b;
+    while(c > 0)
+    {
+        a = b;
+        b = c;
+        c = a % b;
     }
+    gcd = b;
+    // END OF GCD
     lcm = (m * n) / gcd;
     printf("GCD: %d\n", gcd);
-    printf("LCM: %d\n", lcm);
+    printf("LCM: %lld\n", lcm);
 
 }
