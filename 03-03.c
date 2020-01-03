@@ -7,34 +7,5 @@ int main(){
     fgets(b_str,20,stdin);
     a = atoi(a_str);
     b = atoi(b_str);
-
-    if (a > b){
-        i = a;
-    }
-    else if (b < a){
-        i = b;
-    }
-    else if ( a == b){
-        i = a;
-    }
-
     
-    while (1){
-        if (i <= 1){
-            break;
-        }
-        while(a % i == 0 && b % i == 0){
-            a = a / i;
-            b = b / i;
-            //printf("a = %d b = %d\n",a,b);
-        }
-        i--;
-        //printf("i = %d\n",i);
-    }    
-    if (b==1){
-        printf("= %d\n",a);
-    }
-    else{
-        printf("= %d/%d\n",a,b);
-    }
 }

@@ -10,6 +10,7 @@ int main(){
     long long int lcm;
     a = m;
     b = n;
+    
     //Calculate GCD
     c = a % b;
     while(c > 0)
