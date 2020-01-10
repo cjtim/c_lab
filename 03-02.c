@@ -28,6 +28,6 @@ int main(){
     gcd = b;
     // END OF GCD
     lcm = (m * n) / gcd;
-    printf("GCD: %lld\n", gcd);
+    printf("GCD: %d\n", gcd);
     printf("LCM: %lld\n", lcm);
 }

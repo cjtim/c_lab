@@ -1,18 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
 int is_prime(int x){
     int count=0;
     for (int j = 2;j<=x;j++){
         if (x % j == 0){
             count += 1;
         }
-        if (count == 0){
-            return 0;
-        }
-        else if (count == 2)
-        {
-            return 1;
-        }
+    }
+    if (count == 1){
+        return 1;
+    }
+    else
+    {
+        return 0;
     }
 }
 
@@ -24,7 +23,7 @@ int main() {
 
   n = atoi(input);
 
-  for (i = 0; i < n; i++) {
+  for (i = 1; i <= n; i++) {
       if (is_prime(i)) {
           printf("%d is a prime number.\n", i);
       }
