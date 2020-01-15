@@ -14,16 +14,11 @@ int main(){
             int code = 96+num;
             int code_after = code;
             for (int j = 1; j <= (2*num-1); j += 1){
-                if (j+1 <= num){
-                    printf("%c",code);
-                    code--;
-                }
-                else if (j+1 > num){
-                    printf("%c",code);
-                    code++;
-                }
-                if(j != 0 & j != (2*num-1)){
+                if(j <= (2*num)-2*j){
                     printf("-");
+                }
+                else if(j > (2*num)-2*j){
+                    printf("*");
                 }
                 
             }
@@ -35,3 +30,8 @@ int main(){
 //       19
 //    17-19-21
 // 15-17-19-21-23
+
+
+// ----5
+// --3-5
+// 1-3-5
