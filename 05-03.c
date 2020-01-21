@@ -16,7 +16,7 @@ int main(){
         }
         printf("Input Value: ");
         double input;
-        scanf("%lf",&input);
+        scanf(" %lf",&input);
         if (operator == '+'){
             sum += input;
         }
