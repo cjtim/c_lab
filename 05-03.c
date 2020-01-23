@@ -11,8 +11,11 @@ int main(){
         char operator;
         printf("Operator: ");
         scanf(" %c",&operator);
-        if(operator == '@'){
-            break;
+        if(operator == '+' || operator == '-' || operator == '*' || operator == '/'){
+        	int pass = 0;
+        }else
+        {
+        	break;
         }
         printf("Input Value: ");
         double input;
