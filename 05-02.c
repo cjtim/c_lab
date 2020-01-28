@@ -1,50 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
-
-
-int triple(int num){
-    int a = 0, b = 0, c = 0;
-    int m = 2, count = 0;
-    while(a + b + c <= num){
-        for(int n = 1; n < m; n++){
-            a = m*m - n*n;
-            b = 2 * m * n;
-            c = m*m + n*n;
-
-            
-            if (a + b + c == num){
-                if ( a > b && a > c){
-                    int temp = a;
-                    a = b;
-                    b = c;
-                    c = temp;
-                }
-                if (a>b){
-                    int temp = a;
-                    b = a;
-                    a = temp;
-                }
-                if (b > c){
-                    int temp = b;
-                    b = c;
-                    c = temp;
-                }
-                printf(" %d %d %d\n",a,b,c); 
-                count = 1;
+int main(){
+    int a, b, c, n, count = 0, a_max, b_max,  c_max;
+    scanf("%d", &n);
+    for (a = 1; a < n; a++){
+        for (b = 1; b < n; b++ ){
+            c = n - (a + b);
+            if (((a*a + b*b) % 1 == 0) && (n == a + b + c) && (c*c == a*a + b*b) && (a < b) && (b < c)){
+                a_max = a;
+                b_max = b;
+                c_max = c;
+                count +=1;
             }
         }
-        m++;
     }
-    printf(" %d %d %d\n",a,b,c); 
-}
-int main(){
-    int num;
-    scanf("%d", &num);
-    triple(num);
-    // pythagoreanTriplets(num);
-    //sort
-
-
-
+    if (count > 0){
+        printf("(%d, %d, %d)", a_max, b_max, c_max);
+    }
+    if (count == 0){
+        printf("No triple found.");
+    }
 }
