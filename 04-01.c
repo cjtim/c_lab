@@ -13,6 +13,6 @@ int main(){
     n = x >> 1;
     printf("%d",n&1 );
     n = x & 0001;
-    printf("%d.",n);
+    printf("%d.\n",n);
     
 }
