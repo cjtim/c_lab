@@ -6,11 +6,11 @@ int main() {
     // ทดลอง 19 ตัวผ่าน 1234567890123456789
     // ทดลอง 20 ตัว OVERFLOW
     gets(a);
-    long long int b = atoll(a);
-    int i;
-    for(i = 0;i < sizeof(a);i++){
-        printf("print CHAR from for = %c\n",a[i]);
+    for(int zz = 0;zz < sizeof(a);zz++){
+        printf("print CHAR from for = %c\n",a[zz]);
     }
+
+    long long int b = atoll(a);
     printf("int = %lld\n",b);
     return 0;
 }
