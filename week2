@@ -1,0 +1,38 @@
+/* Function */
+#include <stdio.h>
+// Lib มี2อัน .h , .c 
+int addTen(int x){  // return type , name ,(parameter profile)
+    x += 10;        //กระบวนการทำงานของฟังก์ชัน
+    return x;       //ค่าย้อนกลับ
+}
+int addTwenty();
+int x = 50;
+int main(){
+    
+    printf("addTen(10) is %d\n",addTen(x)); //เรียกใช้ Function
+    printf("addTwenty in main %d\n",addTwenty());
+}
+int addTwenty(){
+    printf("x in addTwenty = %d\n",x);
+    x += 20;
+    return x;
+}
+
+// Library
+// ctype check isnum() isalnum()
+// string.h strcat(a,b); ได้ a = a + b | strcpy string copy | strstr check str in str
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
