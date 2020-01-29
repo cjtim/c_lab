@@ -15,7 +15,7 @@ int main()
     // initialize array numbers from 1 to num by numbersPtr
     for (int i = 1;i <= num; i++ && numbersPtr++) {
        *numbersPtr = i;
-       printf("print for array[%d] = %d\n",i-1,numbers[i-1]);
+    //    printf("print for array[%d] = %d\n",i-1,numbers[i-1]);
     }
 
     // loop through count
@@ -36,18 +36,21 @@ int main()
 // remove target from array by pointer *array and append last position by 0
 void removeTarget(int *array, int size, int target)
 {
+    int *first = array;
+    int *last = array+size-1;
+    // printf("last %d\n",*last);
+    // printf("inside function\n");
    for(int loop = 0; loop < size ; loop++){
        if (*array == target){
            int k = 0;
-           while(k <= size-loop ){
-               *(array++) = *(array+1);
+           while(k <= size - loop +1){
+               *(array) = *(array+1);
                k++;
-               printf("debug now is %d\n",*array);
+               array++;
+            //    printf("debug now is %d\n",*array);
            }
-           array = array - size -1 + 11;
-           *array = 0;
+           *last = 0;
            break;
-
        }
        array++;
 
