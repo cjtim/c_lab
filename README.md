@@ -1,7 +1,6 @@
 # c_lab
 [![Run on Repl.it](https://repl.it/badge/github/cjtim/c_lab)](https://repl.it/github/cjtim/c_lab)
-<embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=http://example.com/the.pdf" width="500" height="375">
+<embed src="https://github.com/cjtim/c_lab/raw/master/Lab_Photo_1-6/_ALL_LAB_1_TO_6.pdf" width="500" height="375">
 
 <object data="https://github.com/cjtim/c_lab/raw/master/Lab_Photo_1-6/_ALL_LAB_1_TO_6.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="http://yoursite.com/the.pdf">
