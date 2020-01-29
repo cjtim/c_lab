@@ -24,16 +24,16 @@ int main(){
 
     if (hour == 12){
         if (input[5] == 'p' || input[5] == 'P'|| input[6] == 'p' || input[6] == 'P'){
-            printf("Equivalent 24-hour time: %02d:%02d",hour,minute);
+            printf("Equivalent 24-hour time: %02d:%02d\n",hour,minute);
         }
         else if ( input[5] == 'a' || input[5] == 'A' || input[6] == 'a' || input[6] == 'A'){
-            printf("Equivalent 24-hour time: %02d:%02d",0,minute);
+            printf("Equivalent 24-hour time: %02d:%02d\n",0,minute);
         }
     }
     else if (input[5] == 'p' || input[5] == 'P'|| input[6] == 'p' || input[6] == 'P'){
-        printf("Equivalent 24-hour time: %02d:%02d",hour+12,minute);
+        printf("Equivalent 24-hour time: %02d:%02d\n",hour+12,minute);
     }
     else if ( input[5] == 'a' || input[5] == 'A' || input[6] == 'a' || input[6] == 'A'){
-        printf("Equivalent 24-hour time: %02d:%02d",hour,minute);
+        printf("Equivalent 24-hour time: %02d:%02d\n",hour,minute);
     }
 }
