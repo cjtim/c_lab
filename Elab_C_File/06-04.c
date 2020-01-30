@@ -14,17 +14,10 @@ int main() {
             board[i][j] = 0;
         }
     }
-    int storex[65];
-    int storey[65];
-    int storepiece[65];
     scanf("%d",&left);
     for(int i = 0; i < left; i++){
         scanf(" %lc(%d, %d)",&piece,&xPos,&yPos);
         board[xPos][yPos] = piece;
-        storex[i] = xPos;
-        storey[i] = yPos;
-        storepiece[i] = piece;
-        // printf("storepiece[%d] = %c\n", i, storepiece[i]);
     }
     printf("------------------\n");
     printf("  0 1 2 3 4 5 6 7\n");
@@ -39,12 +32,10 @@ int main() {
             else{
                 printf("%c|",board[x][y]);
             }
-            
         }
         puts("");
 
     }
-
 }
 void setPieceOnTable(int board[][BOARD_SIZE], char piece, int xPos, int yPos ){
     printf("%c|",piece);
