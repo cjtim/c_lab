@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="untitled" targetName="c_lab" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bfbbbd89-f4ca-4e0b-b8e8-683f13a723f2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/c_lab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1VsQ0kqPEcgTaVRNl4RJdf8DAwP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="CLionExternalConfigurable" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gcc" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="c_lab" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="c_lab" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="c_lab">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfbbbd89-f4ca-4e0b-b8e8-683f13a723f2" name="Default Changelist" comment="" />
+      <created>1578039101738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578039101738</updated>
+      <workItem from="1578039107187" duration="1123000" />
+      <workItem from="1578040421445" duration="851000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="761" y="294" key="#Unnamed" timestamp="1578040580887">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="761" y="294" key="#Unnamed/0.22.1920.1018@0.22.1920.1018" timestamp="1578040580887" />
+    <state x="405" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578041095494">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="405" y="193" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.22.1920.1018@0.22.1920.1018" timestamp="1578041095494" />
+    <state x="729" y="243" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1578039231648">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="729" y="243" key="#com.intellij.ide.macro.MacrosDialog/0.22.1920.1018@0.22.1920.1018" timestamp="1578039231648" />
+    <state x="707" y="368" key="#com.intellij.tools.ToolEditorDialog" timestamp="1578039231899">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="707" y="368" key="#com.intellij.tools.ToolEditorDialog/0.22.1920.1018@0.22.1920.1018" timestamp="1578039231899" />
+    <state x="695" y="303" key="EnvironmentVariablesDialog" timestamp="1578039684580">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="695" y="303" key="EnvironmentVariablesDialog/0.22.1920.1018@0.22.1920.1018" timestamp="1578039684580" />
+    <state width="1053" height="342" key="GridCell.Tab.0.bottom" timestamp="1578041306421">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state width="1053" height="342" key="GridCell.Tab.0.bottom/0.22.1920.1018@0.22.1920.1018" timestamp="1578041306421" />
+    <state width="1053" height="342" key="GridCell.Tab.0.center" timestamp="1578041306420">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state width="1053" height="342" key="GridCell.Tab.0.center/0.22.1920.1018@0.22.1920.1018" timestamp="1578041306420" />
+    <state width="1053" height="342" key="GridCell.Tab.0.left" timestamp="1578041306419">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state width="1053" height="342" key="GridCell.Tab.0.left/0.22.1920.1018@0.22.1920.1018" timestamp="1578041306419" />
+    <state width="1053" height="342" key="GridCell.Tab.0.right" timestamp="1578041306421">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state width="1053" height="342" key="GridCell.Tab.0.right/0.22.1920.1018@0.22.1920.1018" timestamp="1578041306421" />
+    <state width="1053" height="342" key="GridCell.Tab.1.bottom" timestamp="1578041306423">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state width="1053" height="342" key="GridCell.Tab.1.bottom/0.22.1920.1018@0.22.1920.1018" timestamp="1578041306423" />
+    <state width="1053" height="342" key="GridCell.Tab.1.center" timestamp="1578041306422">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state width="1053" height="342" key="GridCell.Tab.1.center/0.22.1920.1018@0.22.1920.1018" timestamp="1578041306422" />
+    <state width="1053" height="342" key="GridCell.Tab.1.left" timestamp="1578041306422">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state width="1053" height="342" key="GridCell.Tab.1.left/0.22.1920.1018@0.22.1920.1018" timestamp="1578041306422" />
+    <state width="1053" height="342" key="GridCell.Tab.1.right" timestamp="1578041306423">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state width="1053" height="342" key="GridCell.Tab.1.right/0.22.1920.1018@0.22.1920.1018" timestamp="1578041306423" />
+    <state x="450" y="170" key="SettingsEditor" timestamp="1578040146394">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="450" y="170" key="SettingsEditor/0.22.1920.1018@0.22.1920.1018" timestamp="1578040146394" />
+    <state x="639" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1578039114893">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="639" y="363" key="com.intellij.ide.util.TipDialog/0.22.1920.1018@0.22.1920.1018" timestamp="1578039114893" />
+    <state x="837" y="273" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1578040310205">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="837" y="273" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.22.1920.1018@0.22.1920.1018" timestamp="1578040310205" />
+    <state x="924" y="274" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1578041041036">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="924" y="274" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.22.1920.1018@0.22.1920.1018" timestamp="1578041041036" />
+    <state x="606" y="245" width="670" height="675" key="run.anything.popup" timestamp="1578041106712">
+      <screen x="0" y="22" width="1920" height="1018" />
+    </state>
+    <state x="606" y="245" width="670" height="675" key="run.anything.popup/0.22.1920.1018@0.22.1920.1018" timestamp="1578041106712" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/03-03.c</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
