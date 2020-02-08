@@ -4,7 +4,7 @@
 struct node { 
    int data; 
    struct node *next; 
-}; 
+};
   
 void queue_list(struct node **head, struct node **tail, int input[], int n)
 {  int i;
@@ -73,7 +73,7 @@ int main()
 
    n = sizeof(input)/sizeof(input[0]);
    queue_list(&head, &tail, input, n);
-   //stack_list(&head, &tail, input, n);
+   // stack_list(&head, &tail, input, n);
    print_list(head);
    tmp = delete_node(&head, &tail, 8);
    free(tmp);
