@@ -5,17 +5,21 @@ struct node {
    int data; 
    struct node *next; 
 };
-struct node *head=NULL, *tail=NULL, *tmp;
 
-void create_list(struct node **head, struct node **tail, int list[], int n_num)
+void insert_to_list(struct node **head, int list_num)
 {
-    /* data */
+    struct node *tmp = (struct node *)malloc(sizeof(struct node));    
+    *head = (struct node *)malloc(sizeof(struct node));
+    (*head)->next = NULL;
+    (*head)->data = list_num;
 }
-void insert_list(struct node **head, struct node **he
+void print_list(struct node *head)
 {
-    /* data */
-};
-)
+   for (; head; head = head->next)
+      printf("%d ", head->data);
+   putchar('\n');
+}
+
 int main(){
     int num, list_num[100] = {0}, i = 0, n_num = 0;
     while (num != -1){
@@ -24,5 +28,18 @@ int main(){
             list_num[i] = num;
             n_num++;
         }
+    }
+    struct node *head=NULL, *tail=NULL, *tmp;
+    for (int i = 0; i < n_num; i++){
+        if(head != NULL){
+        }   
+        else{
+            int data = list_num[i];
+            insert_to_list(&head, list_num[i]);
+        }     
+    }
+    printf("printing\n");
+    for (int i = 0; i < n_num; i++){
+        print_list(head);
     }
 }
