@@ -1,6 +1,7 @@
-// 6210402364 Jinna Chodchoy 
+// 6210402364 Jinna Chodchoy
 #include <stdio.h> 
 #include <stdlib.h>
+
 struct node { 
    int data; 
    struct node *next; 
@@ -26,34 +27,40 @@ void swap(struct node *a, struct node *b)
     a->data = b->data; 
     b->data = temp; 
 } 
-void Sort(struct node *head, int n) 
+/* Bubble sort the given linked list */
+void bubbleSort(struct node *head) 
 { 
     // PRE_NODE | NODE 
-    int i = 0, pass = 1;
-    struct node *NODE = head; 
+    int swapped, i; 
+    struct node *NODE; 
     struct node *LAST_NODE = NULL; 
     /* Checking for empty list */
     if (head == NULL) 
         return; 
-    // NODE = head;
-    while (pass < n){
-        NODE = head;
-        while(NODE->next != LAST_NODE){
-            if (NODE->data > (NODE->next)->data){
-                swap(NODE , NODE->next);
-            }
-            NODE = NODE->next;
-        }
-        pass++;
-
+    do
+    { 
+        swapped = 0; 
+        NODE = head; 
+        while (NODE->next != LAST_NODE) 
+        { 
+            if (NODE->data > (NODE->next)->data) 
+            {  
+                swap(NODE, NODE->next); 
+                swapped = 1; 
+            } 
+            NODE = NODE->next; 
+        } 
+        LAST_NODE = NODE; 
     }
-} 
+    while (swapped);
+}
 void print_list(struct node *head)
 {
    for (; head; head = head->next)
       printf("%d ", head->data);
    putchar('\n');
 }
+
 int main(){
     int num, list_num[100] = {0}, n_num = 0;
     for (int i = 0; num != -1; i++){
@@ -65,6 +72,19 @@ int main(){
     }
     struct node *head=NULL, *tail=NULL, *tmp;
     insert_to_list(&head, &tail, list_num, n_num);
-    Sort(head, n_num);
+        /* SAME AS insert_to_list
+        for (int i = 0; i < n_num; i++){
+            if (head == NULL){
+            head = tail = (struct node *)malloc(sizeof(struct node));
+            }
+            else {
+                tail->next = (struct node *)malloc(sizeof(struct node));
+                tail = tail->next;
+            }
+            (tail)->data = list_num[i];  //printf("list_num is %d\n",list_num[i]);
+            (tail)->next = NULL;
+        }
+        */
+    bubbleSort(head); 
     print_list(head);
 }
