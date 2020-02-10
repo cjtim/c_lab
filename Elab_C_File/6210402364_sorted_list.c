@@ -62,5 +62,7 @@ int main(){
         }
     }
     Sort(head, n_num);
-    print_list(head);
+    // print_list(head);    
+    for (tmp=head; tmp; tmp = tmp->next)
+    printf("%d\n", tmp->data);
 }
