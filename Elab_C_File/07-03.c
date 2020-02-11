@@ -3,22 +3,22 @@ void stringcat(char src[], char dest[])
 {
     // dest[] = src[] + dest[]
     char new[200];
-    int i = 0;
+    int i = 0, j = 0,k;
+    //count src I
     while(src[i] != '\0'){
-        new[i] = src[i];
         i++;
     }
-    int j = i+1;
-    i = 0;
-    while (dest[i] != '\0'){
-        new[j] = dest[i];
-        i++;
+    //count dest J
+    while(dest[j] !='\0'){
         j++;
-
     }
-    for (int k = 0; k < i+j; k++){
-        dest[k] = new[k];
-        printf("%c\n",new[k]);
+    int e = 0;
+    for (k = j; k < i+j; k++){
+        dest[k] = src[e];
+        e++;
+        if(k == i+j-1){
+            dest[k+1] = '\0';
+        }
     }
 }
 int main()
