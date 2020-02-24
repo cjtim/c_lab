@@ -1,45 +1,68 @@
+// 6210402364 Jinna Chodchoy 
 #include <stdio.h> 
 #include <stdlib.h>
-
 struct node { 
    int data; 
    struct node *next; 
 };
+/* function to swap data of two nodes a and b*/
+void swap(struct node *a, struct node *b) 
+{ 
+    int temp = a->data; 
+    a->data = b->data; 
+    b->data = temp; 
+} 
+void Sort(struct node *head, int n) 
+{ 
+    // PRE_NODE | NODE 
+    int i = 0, pass = 1;
+    struct node *NODE = head; 
+    struct node *LAST_NODE = NULL; 
+    /* Checking for empty list */
+    if (head == NULL) 
+        return; 
+    // NODE = head;
+    while (pass < n){
+        NODE = head;
+        while(NODE->next != LAST_NODE){
+            if (NODE->data > (NODE->next)->data){
+                swap(NODE , NODE->next);
+            }
+            NODE = NODE->next;
+        }
+        pass++;
 
-void insert_to_list(struct node **head, int list_num)
-{
-    struct node *tmp = (struct node *)malloc(sizeof(struct node));    
-    *head = (struct node *)malloc(sizeof(struct node));
-    (*head)->next = NULL;
-    (*head)->data = list_num;
-}
+    }
+} 
 void print_list(struct node *head)
 {
    for (; head; head = head->next)
       printf("%d ", head->data);
    putchar('\n');
 }
-
 int main(){
-    int num, list_num[100] = {0}, i = 0, n_num = 0;
-    while (num != -1){
+    int num, list_num[100] = {0}, n_num = 0;
+    struct node *head=NULL, *tail=NULL, *tmp;
+    for (int i = 0; num != -1; i++){
         scanf(" %d",&num);
         if (num != -1){
             list_num[i] = num;
+            if (head == NULL){
+                head = tail = (struct node *)malloc(sizeof(struct node));
+            }
+            else {
+                tail->next = (struct node *)malloc(sizeof(struct node));
+                tail = tail->next;
+            }
+            (tail)->data = list_num[i]; 
+            (tail)->next = NULL;
             n_num++;
+            Sort(head, n_num);
+            // print_list(head); //for debug
         }
     }
-    struct node *head=NULL, *tail=NULL, *tmp;
-    for (int i = 0; i < n_num; i++){
-        if(head != NULL){
-        }   
-        else{
-            int data = list_num[i];
-            insert_to_list(&head, list_num[i]);
-        }     
-    }
-    printf("printing\n");
-    for (int i = 0; i < n_num; i++){
-        print_list(head);
-    }
+    Sort(head, n_num);
+    // print_list(head);    
+    for (tmp=head; tmp; tmp = tmp->next)
+    printf("%d\n", tmp->data);
 }
