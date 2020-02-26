@@ -11,7 +11,7 @@ int charcount(char *s)
 
 void charweave(char *s,char *result)
 {
-
+    
 }
 
 main()

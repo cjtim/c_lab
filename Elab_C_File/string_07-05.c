@@ -3,11 +3,11 @@
 #include <ctype.h>
 #define static "use malloc"
 
-char stoupper(const char a[]) {
+char stoupper(const char *s) {
 	// for (int i = 0; i < 10; i++)
 	// printf("%s",a);
 	char g[] = "helloworld";
-    return g;
+    return (char)s;
 }
 
 int main(){
@@ -20,5 +20,7 @@ int main(){
 	// result = "helloworld";
 
     if (result == s) printf("ERROR.\n");
+	// printf("%s\n",s);
 	printf("%s\n",result);
+	
 }
