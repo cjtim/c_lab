@@ -7,6 +7,6 @@ int main(){
         a[k] = a[k-1]+a[k-2];
     printf("%d\n",*ptr);
     printf("%d\n",*(ptr+2));
-    printf("%p\n",ptr);
+    printf("%d\n",ptr[3]);
     printf("%d\n",ptr[-1]);
 }
