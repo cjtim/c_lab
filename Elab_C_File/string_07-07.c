@@ -1,6 +1,6 @@
 #include <stdio.h>
 void roman2arabic(char input[],char output[]){
-    int i = 0, j = 0, count ;
+    int i = 0, j = 0, count = 0;
     for (i = 0; input[i] != '\0';i++){
         count += 1;
     }
