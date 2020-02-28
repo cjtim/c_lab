@@ -3,6 +3,7 @@
         "stdlib.h": "c",
         "stdio.h": "c",
         "algorithm": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "__locale": "c"
     }
 }
