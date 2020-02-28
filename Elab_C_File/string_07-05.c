@@ -3,11 +3,15 @@
 #include <ctype.h>
 #define static "use malloc"
 
-char stoupper(const char *s) {
-	// for (int i = 0; i < 10; i++)
-	// printf("%s",a);
-	char g[] = "helloworld";
-    return (char)s;
+char* stoupper(const char s[]) {
+    char *sPtr = (char*)malloc(100);
+    int i = 0;
+    for(i = 0;s[i] != '\0'; i++){
+        *sPtr = toupper(s[i]);
+        sPtr++;
+        // printf("%c",toupper(s[i]));
+    }
+    return sPtr-i;
 }
 
 int main(){
