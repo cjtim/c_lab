@@ -11,17 +11,10 @@ typedef struct Student{
 
 void findTop(StudentRecord pRec[], int size, StudentRecord **topMid, StudentRecord **topFin) {
     int i = 0, maxMid = 0, maxFin;
-    // for(i = 0; i < ARRAY_SIZE; i++){
-    //     if((&pRec[i])->midterm > maxMid){
-    //       printf("MAXIMUM POWERRRRR\n");
-    //         // (*topMid) = (StudentRecord*)malloc(sizeof(StudentRecord));
-    //         // (*topMid)->id = pRec[i].id;
-    //     }
-    // }
-    printf("Student [0] is = %s\n", pRec->id);
-    (*topMid) = *topFin = (StudentRecord*)malloc(sizeof(StudentRecord));
-    topMid.id = "1111";
-    topFin.id = "9999";
+    printf("Student [0] is = %s\n", pRec[0].id);
+    printf("score mid = %d final is %d\n\n\n",pRec[0].midterm, pRec[0].final);
+    // *topMid = &pRec[0];
+    // *topFin = &pRec[0];
 }
 
 int main() {
@@ -39,7 +32,7 @@ int main() {
   findTop(&students[ARRAY_SIZE], ARRAY_SIZE, &pTopMid, &pTopFin);
   //print grade
   printf("Top Score for Midterm:\n");
-  printf("Student ID %s with score %d\n", pTopMid->id, pTopMid->midterm);
+  printf("Student ID %s with score %d\n", pTopMid->id, pTopMid->midterm );
   printf("Top Score for Final:\n");
   printf("Student ID %s with score %d\n", pTopFin->id, pTopFin->final);
   return 0;
