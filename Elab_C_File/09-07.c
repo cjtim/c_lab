@@ -9,7 +9,7 @@ double findAverage(char *filename)
     char line[100];
     double sum, i, num;
     while (fscanf(fp, "%lf", &num) != EOF){
-        printf(">> %lf <<\n", num);
+        // printf(">> %lf <<\n", num);
         sum += num;
         i++;
     }

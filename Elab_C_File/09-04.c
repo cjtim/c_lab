@@ -14,17 +14,22 @@ int main(){
         scanf("%20s", input);
 
         while(1){
-            strcpy(input, data[0].word);i++;
-            for(int j = 0; data[i].word != 0; j++){
-                if
-            }
+            i = 0;
+            strcat(data[0].word, input);i++;
+            printf("input data[0].word is %s\n",data[0].word);
             while(1){
-                scanf("%20s", data[i]);
+                scanf("%20s", input);
+                if(strcmp(input , "exit") == 0){
+                    break;
+                }
+                else{
+                    data[i].count += 1;
+                }
                 i++;
             }
             
                 
-
+            break;
         }
 
         printf("Output:\n");
