@@ -1,18 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedey struct Node { 
+typedef struct Node { 
    int data; 
    struct node *next; 
 }node;
 
 
 void printList(node *pList) {
-
+  while(pList->next != NULL){
+    printf("%d\n", pList->data);
+    pList = pList->next;
+  }
 }
 
- insertNode(
-) {
+void insertNode(node *pList,int num) {
 
 }
 
@@ -22,8 +24,7 @@ int main() {
 
   for (i = 0; i < 10; i++) {
     scanf(" %d", &value);
-    
-
+    insertNode()
   }
 
   printList(pList);
