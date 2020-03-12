@@ -5,6 +5,7 @@
         "algorithm": "c",
         "math.h": "c",
         "__locale": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }

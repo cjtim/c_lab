@@ -5,13 +5,47 @@ typedef enum DayOfWeek
 
 
 DayOfWeek findDayOfWeek(int day, int month) {
-    int total = day % 7;
-    int first = 3; // Tuesday
-
-
-    }
-    printf("total is %d\n",total);
-    return total;
+	int start;
+	switch (month)
+	{
+	case 1:
+		start = 2;
+		return (day+start-1)%7;
+	case 2:
+		start = 5;
+		return (day+start-1)%7;
+	case 3:
+		start = 5;
+		return (day+start-1)%7;
+	case 4:
+		start = 1;
+		return (day+start-1)%7;
+	case 5:
+		start = 3;
+		return (day+start-1)%7;
+	case 6:
+		start = 6;
+		return (day+start-1)%7;
+	case 7:
+		start = 1;
+		return (day+start-1)%7;
+	case 8:
+		start = 4;
+		return (day+start-1)%7;
+	case 9:
+		start = 0;
+		return (day+start-1)%7;
+	case 10:
+		start = 2;
+		return (day+start-1)%7;
+	case 11:
+		start = 5;
+		return (day+start-1)%7;
+	case 12:
+		start = 0;
+		return (day+start-1)%7;
+	}
+	return 0;
 }
 
 int main()
@@ -25,12 +59,12 @@ int main()
 	dow = findDayOfWeek(day, month);
 	printf("Day:%d Month:%d of Year 2013 is ", day, month);
 	switch(dow){
-		case 5: printf("Sunday.\n"); break;
-		case 6: printf("Monday.\n"); break;
-		case 0: printf("Tuesday.\n"); break;
-		case 1: printf("Wednesday.\n"); break;
-		case 2: printf("Thursday.\n"); break;
-		case 3: printf("Friday.\n"); break;
-		case 4: printf("Saturday.\n"); break;
+		case 0: printf("Sunday.\n"); break;
+		case 1: printf("Monday.\n"); break;
+		case 2: printf("Tuesday.\n"); break;
+		case 3: printf("Wednesday.\n"); break;
+		case 4: printf("Thursday.\n"); break;
+		case 5: printf("Friday.\n"); break;
+		case 6: printf("Saturday.\n"); break;
 	}
 }
