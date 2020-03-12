@@ -3,8 +3,9 @@
 using namespace std;
 
 int main(){
-    string name;
+    string name, str;
     cin >> name;
+    char out[100];
     double salary;
     cin >> salary;
     int month = 1;
@@ -16,4 +17,6 @@ int main(){
     }
     cout << name;
     printf(" %.2lf\n", plus);
+    // sprintf(out, "%s %.2lf", name, plus);
+    // cout << out << endl;
 }

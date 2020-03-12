@@ -4,6 +4,8 @@
         "stdio.h": "c",
         "algorithm": "c",
         "math.h": "c",
-        "__locale": "c"
+        "__locale": "c",
+        "cstdio": "cpp",
+        "iostream": "cpp"
     }
 }
