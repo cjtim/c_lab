@@ -6,6 +6,7 @@
         "math.h": "c",
         "__locale": "c",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iosfwd": "cpp"
     }
 }
