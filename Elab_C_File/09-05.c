@@ -55,6 +55,13 @@ void bubbleSort(struct node *head)
     while (swapped);
 }
 
+void printList(node *pList) {
+    while(pList->next != NULL){
+        printf("%d");
+        pList = pList->next;
+    }
+    putchar('\n');
+}
 int main() {
   int i, value;
   node *pList=NULL;
