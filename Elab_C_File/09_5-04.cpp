@@ -1,23 +1,24 @@
-#include<stdio.h>
-#include<string.h>
-
+#include<iostream>
+using namespace std;
 struct Word {
     char word[21];
     int count;
 
 };
 
-int main(){
-        char input[21];
-        int i, last_word = 0, find = 0;
-        struct Word data[20] = {0};
-        scanf("%20s", input);
+int main() {
+    string input;
+    int i, last_word = 0, find = 0;
+    Word data[20];
 
-        while(1){
-            if(strcmp(input , "exit") == 0){break;}
+    while (true) {
+        cin >> input;
+        if (input == "exit") {
+            break;
+        }
             i = 0;
             int break_loop = 0;
-            strcpy(data[0].word, input);
+            data[0].word << input;
             data[0].count += 1;
             i++;
             last_word++;
@@ -25,12 +26,12 @@ int main(){
             
             while(1){
                 scanf("%20s", input);
-                if(strcmp(input , "exit") == 0){
+                if(input == "exit"){
                     break;
                 }
                 else{
                     for(int j = 0; j < i; j++){
-                        if(strcmp(data[j].word, input) == 0){
+                        if(data[j].word == input){
                             // printf("    strcmp(data[%d].word, input) = %d\n", j, strcmp(data[j].word, input));
                             data[j].count += 1;
                             break_loop = 1;
@@ -39,7 +40,7 @@ int main(){
                         }
                     }
                     if(break_loop == 0){
-                        strcpy(data[i].word, input);
+                        data[i].word << input;
                         data[i].count += 1;
                         last_word++;
                         i++;
