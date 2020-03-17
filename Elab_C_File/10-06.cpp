@@ -1,8 +1,6 @@
 #include <iostream>
-#include <sstream>
 #include <cmath>
 #include <string>
-#include <iomanip>
 
 using namespace std;
 
@@ -24,6 +22,15 @@ public:
         duration -= minute*60;
         second = duration; 
     }
+    void setHour(int hr){
+        this->hour = hr;
+    }
+    void setMinute(int min){
+        this->minute = min;
+    }
+    void setSecond(int sec){
+        this->second = sec;
+    }
     int getDuration(){
         return hour*3600 + minute*60 + second;
     }
@@ -37,13 +44,7 @@ public:
         return second;
     }
     Time add(Time other){
-        // int all = other.getDuration();
-        // hour += all/3600;
-        // all -= (all/3600)*3600;
-        // minute += all/60;
-        // all -= (all/60)*60;
-        // second += all;
-        Time tmp(getDuration() + other.getDuration());
+        Time tmp(other.getDuration()+getDuration());
         return tmp;
     }
     int subtract(Time other){
@@ -58,9 +59,10 @@ public:
         }
     }
     string toString(){
-        stringstream ss;
-        ss << setw(2) << setfill('0') << hour << ":" << setw(2) << setfill('0') << minute << ":" << setw(2) << setfill('0') <<second;
-        return ss.str();
+        // stringstream ss;
+        // ss << setw(2) << setfill('0') << hour << ":" << setw(2) << setfill('0') << minute << ":" << setw(2) << setfill('0') <<second;
+        
+        return to_string(hour) + ":" + to_string(minute) + ":" + to_string(second);
     }
 };
 
@@ -68,8 +70,8 @@ public:
 int main()
 {
    // implement program to test class Time
-   Time t1(100);
-   Time t2(0);
+   Time t1(02,02,02);
+   Time t2(01,01,01);
    
    cout << t1.toString() << endl;
    cout << t2.toString() << endl;
