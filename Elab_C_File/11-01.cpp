@@ -24,6 +24,7 @@ public:
     double getSide();
 };
 
+
 Rectangle::Rectangle(double width, double height){
     this->width = width;
     this->height = height;
@@ -32,7 +33,7 @@ double Rectangle::area(){
     return width * height;
 };
 double Rectangle::circumference(){
-    return 2;
+    return width*2 + height*2;
 };
 double Rectangle::getHeight(){
     return height;
@@ -40,7 +41,8 @@ double Rectangle::getHeight(){
 double Rectangle::getWidth(){
     return width;
 };
-SquareRectangle::SquareRectangle(double side){
+SquareRectangle::SquareRectangle(double side) : Rectangle(side, side)
+{
     this->side = side;
 };
 double SquareRectangle::getSide(){
