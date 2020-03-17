@@ -7,6 +7,10 @@
         "__locale": "c",
         "iostream": "cpp",
         "ostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "ios": "cpp",
+        "iomanip": "cpp",
+        "memory": "cpp",
+        "utility": "cpp"
     }
 }
