@@ -29,11 +29,11 @@ Animal::Animal(int happiness, int energy, int fullness){
 }
 void Animal::limitStat(){
     if(happiness < 0){happiness = 0;}
-    if(happiness > 100){happiness = 100;}
+    if(happiness > 100){happiness = MAX_FULLNESS;}
     if(energy < 0){energy = 0;}
-    if(energy > 100){energy = 100;}
+    if(energy > 100){energy = MAX_FULLNESS;}
     if (fullness < 0){fullness = 0;}
-    if (fullness > 100){fullness = 100;}
+    if (fullness > 100){fullness = MAX_FULLNESS;}
 }
 int Animal::getHappiness(){
     return happiness;
@@ -56,15 +56,15 @@ void Animal::eat(int food){
 }
 void Animal::play(int hour){
     if (energy > 0 && fullness > 0 ){
-        energy -= (10* hour);
-        fullness -= (20*hour);
-        happiness += (5*hour);
+        energy -= (10 * hour);
+        fullness -= (20 * hour);
+        happiness += (5 * hour);
     }
     limitStat();
 }
 void Animal::sleep(int hour){
-    energy += (10*hour);
-    fullness -= (10*hour);
+    energy += (10 * hour);
+    fullness -= (10 * hour);
     limitStat();
 }
 
@@ -73,18 +73,18 @@ void Animal::sleep(int hour){
 int main()
 {
     Animal a1(100, 100, 100);
-    a1.eat(100);
+    a1.eat(0);
     cout << "Energy : " << a1.getEnergy() << endl;
     cout << "Fullness : " << a1.getFullness() << endl;
     cout << "Happyness : " << a1.getHappiness() << endl;
 
-    a1.play(2);
+    a1.play(0);
     cout << endl;
     cout << "Energy : " << a1.getEnergy() << endl;
     cout << "Fullness : " << a1.getFullness() << endl;
     cout << "Happyness : " << a1.getHappiness() << endl;
 
-    a1.sleep(3);
+    a1.sleep(0);
     cout << endl;
     cout << endl;
     cout << "Energy : " << a1.getEnergy() << endl;
