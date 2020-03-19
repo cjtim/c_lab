@@ -82,8 +82,8 @@ public:
 int main()
 {
    // implement program to test class Time
-   Time t1(11,11,11);
-   Time t2(12,12,12);
+   Time t1(0,0,1);
+   Time t2(0,0,0);
    
    cout << t1.toString() << endl;
    cout << t2.toString() << endl;

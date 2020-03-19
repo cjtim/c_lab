@@ -65,24 +65,12 @@ public:
     }
     string toString(){
         string hr, min, sec;
-        if(hour >= 10){
-            hr = to_string(hour);
-        }
-        else{
-            hr = string(1, '0').append(to_string(hour));
-        }
-        if (minute >= 10){
-            min = to_string(minute);
-        }
-        else{
-            min = string(1, '0').append(to_string(minute));
-        }
-        if(second >= 10){
-            sec = to_string(second);
-        }
-        else{
-            sec = string(1, '0').append(to_string(second));  
-        }
+        if(hour >= 10){hr = to_string(hour);}
+            else{hr = string(1, '0').append(to_string(hour));}
+        if (minute >= 10){min = to_string(minute);}
+            else{min = string(1, '0').append(to_string(minute));}
+        if(second >= 10){sec = to_string(second);}
+            else{sec = string(1, '0').append(to_string(second));}
         return hr + ":" + min + ":" + sec;
     }
 };
@@ -91,7 +79,7 @@ public:
 int main()
 {
    // implement program to test class Time
-   Time t1(9,02,02);
+   Time t1(10,02,02);
    Time t2(12,01,01);
    
    cout << t1.toString() << endl;
