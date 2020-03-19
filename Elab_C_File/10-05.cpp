@@ -24,6 +24,15 @@ public:
         duration -= minute*60;
         second = duration; 
     }
+    void setHour(int hr){
+        hour = hr;
+    }
+    void setMinute(int min){
+        minute = min;
+    }
+    void setSecond(int sec){
+        second = sec;
+    }
     int getDuration(){
         return hour*3600 + minute*60 + second;
     }
@@ -47,7 +56,12 @@ public:
         return tmp;
     }
     int subtract(Time other){
-        return abs( getDuration() - other.getDuration() );
+        if( getDuration() - other.getDuration() < 0 ){
+            return 86400 + getDuration() - other.getDuration();
+        }
+        else{
+            return getDuration() - other.getDuration();
+        }
     }
     int equals(Time other){
         if(getDuration() == other.getDuration()){
@@ -68,13 +82,14 @@ public:
 int main()
 {
    // implement program to test class Time
-   Time t1(100);
-   Time t2(0);
+   Time t1(11,11,11);
+   Time t2(12,12,12);
    
    cout << t1.toString() << endl;
    cout << t2.toString() << endl;
    cout << t1.getDuration() << endl;
    cout << t2.getDuration() << endl;
    cout << "Subtract " << t1.subtract(t2) << endl;
+   cout << "Subtract " << t2.subtract(t1) << endl;
    
 }

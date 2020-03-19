@@ -23,13 +23,13 @@ public:
         second = duration; 
     }
     void setHour(int hr){
-        this->hour = hr;
+        hour = hr;
     }
     void setMinute(int min){
-        this->minute = min;
+        minute = min;
     }
     void setSecond(int sec){
-        this->second = sec;
+        second = sec;
     }
     int getDuration(){
         return hour*3600 + minute*60 + second;
@@ -44,11 +44,16 @@ public:
         return second;
     }
     Time add(Time other){
-        Time tmp(other.getDuration()+getDuration());
+        Time tmp(getDuration() + other.getDuration());
         return tmp;
     }
     int subtract(Time other){
-        return abs( getDuration() - other.getDuration() );
+        if( getDuration() - other.getDuration() < 0 ){
+            return 86400 + getDuration() - other.getDuration();
+        }
+        else{
+            return getDuration() - other.getDuration();
+        }
     }
     int equals(Time other){
         if(getDuration() == other.getDuration()){
@@ -59,10 +64,26 @@ public:
         }
     }
     string toString(){
-        // stringstream ss;
-        // ss << setw(2) << setfill('0') << hour << ":" << setw(2) << setfill('0') << minute << ":" << setw(2) << setfill('0') <<second;
-        
-        return to_string(hour) + ":" + to_string(minute) + ":" + to_string(second);
+        string hr, min, sec;
+        if(hour >= 10){
+            hr = to_string(hour);
+        }
+        else{
+            hr = string(1, '0').append(to_string(hour));
+        }
+        if (minute >= 10){
+            min = to_string(minute);
+        }
+        else{
+            min = string(1, '0').append(to_string(minute));
+        }
+        if(second >= 10){
+            sec = to_string(second);
+        }
+        else{
+            sec = string(1, '0').append(to_string(second));  
+        }
+        return hr + ":" + min + ":" + sec;
     }
 };
 
@@ -70,13 +91,15 @@ public:
 int main()
 {
    // implement program to test class Time
-   Time t1(02,02,02);
-   Time t2(01,01,01);
+   Time t1(9,02,02);
+   Time t2(12,01,01);
    
    cout << t1.toString() << endl;
    cout << t2.toString() << endl;
    cout << t1.getDuration() << endl;
    cout << t2.getDuration() << endl;
    cout << "Subtract " << t1.subtract(t2) << endl;
+   cout << "Subtract " << t2.subtract(t1) << endl;
+   
    
 }
