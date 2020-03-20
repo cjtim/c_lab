@@ -11,16 +11,57 @@ private:
     int second;
 public:
     Time(int hour, int minute, int second){
-        this -> hour = hour;
-        this -> minute = minute;
-        this -> second = second;
+        if(second >= 60){
+            this->minute += 1;
+            this->second -= 60;
+        }
+        else{
+            this->second = second;
+        }
+
+        if(minute >= 60){
+            this->hour += 1;
+            this->minute -= 60;
+        }
+        else{
+            this->minute = minute;
+        }
+
+        if(hour >= 24){
+            this->hour = hour - 24;
+        }
+        else{
+            this->hour = hour;
+        }
     }
     Time(int duration){
-        hour = duration/3600;
+        int hour = duration/3600;
         duration -= hour*3600;
-        minute = duration/60;
+        int minute = duration/60;
         duration -= minute*60;
-        second = duration; 
+        int second = duration; 
+        if(second >= 60){
+            this->minute += 1;
+            this->second -= 60;
+        }
+        else{
+            this->second = second;
+        }
+
+        if(minute >= 60){
+            this->hour += 1;
+            this->minute -= 60;
+        }
+        else{
+            this->minute = minute;
+        }
+
+        if(hour >= 24){
+            this->hour = hour - 24;
+        }
+        else{
+            this->hour = hour;
+        }
     }
     void setHour(int hr){
         hour = hr;
@@ -79,15 +120,16 @@ public:
 int main()
 {
    // implement program to test class Time
-   Time t1(10,02,02);
-   Time t2(12,01,01);
+   Time a(23,0,0);
+   Time b(86400);
    
-   cout << t1.toString() << endl;
-   cout << t2.toString() << endl;
-   cout << t1.getDuration() << endl;
-   cout << t2.getDuration() << endl;
-   cout << "Subtract " << t1.subtract(t2) << endl;
-   cout << "Subtract " << t2.subtract(t1) << endl;
+   cout << a.toString() << endl;
+   cout << b.toString() << endl;
+   cout << a.getDuration() << endl;
+   cout << b.getDuration() << endl;
+   cout << "Subtract " << a.subtract(b) << endl;
+   cout << "Subtract " << b.subtract(a) << endl;
+
    
    
 }

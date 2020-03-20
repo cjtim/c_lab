@@ -12,17 +12,58 @@ private:
     int minute;
     int second;
 public:
-    Time(int hour, int minute, int second){
-        this -> hour = hour;
-        this -> minute = minute;
-        this -> second = second;
+Time(int hour, int minute, int second){
+        if(second >= 60){
+            this->minute += 1;
+            this->second -= 60;
+        }
+        else{
+            this->second = second;
+        }
+
+        if(minute >= 60){
+            this->hour += 1;
+            this->minute -= 60;
+        }
+        else{
+            this->minute = minute;
+        }
+
+        if(hour >= 24){
+            this->hour = hour - 24;
+        }
+        else{
+            this->hour = hour;
+        }
     }
     Time(int duration){
-        hour = duration/3600;
+        int hour = duration/3600;
         duration -= hour*3600;
-        minute = duration/60;
+        int minute = duration/60;
         duration -= minute*60;
-        second = duration; 
+        int second = duration; 
+        if(second >= 60){
+            this->minute += 1;
+            this->second -= 60;
+        }
+        else{
+            this->second = second;
+        }
+
+        if(minute >= 60){
+            this->hour += 1;
+            this->minute -= 60;
+        }
+        else{
+            this->minute = minute;
+        }
+
+        if(hour >= 24){
+            this->hour = hour - 24;
+        }
+        else{
+            this->hour = hour;
+        }
     }
     void setHour(int hr){
         hour = hr;
@@ -83,7 +124,7 @@ int main()
 {
    // implement program to test class Time
    Time t1(0,0,1);
-   Time t2(0,0,0);
+   Time t2(25,0,0);
    
    cout << t1.toString() << endl;
    cout << t2.toString() << endl;
