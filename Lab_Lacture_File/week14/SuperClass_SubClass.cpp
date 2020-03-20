@@ -60,7 +60,7 @@ int main(){
     Person jack("Jack","Rushsel", 1);
     cout << jack.getName() << endl;
     // cout << jack.getScore(); // Error SuperClass cannot call function from subclass
-    Student korn("Thanalorn");
+    Student korn("Thanalorn","aka",2);
     cout << korn.getName() << endl; //SubClass can call function from superClass
     korn.addScore(1);
     cout << korn.getScore() << endl; // SubClass can call function from itself
