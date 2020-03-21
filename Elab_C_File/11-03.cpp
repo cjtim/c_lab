@@ -3,7 +3,7 @@ using namespace std;
 
 class Animal
 {
-private:
+protected:
     int happiness;
     int energy;
     int fullness;
@@ -20,22 +20,16 @@ public:
     void play(int);
     void sleep(int);
 };
-class Bird :public Animal
+
+class Bird : public Animal
 {
 public:
-    Bird(int, int, int);
-    void fly(int);
+    Bird(int happiness, int energy, int fullness);
+    void fly(int hour);
     void sing();
 };
 
-Bird::Bird(int happiness, int energy, int fullness) :Animal(happiness, energy, fullness){
-    happiness = (happiness);
-    energy = (energy);
-    fullness = (fullness);
-}
-void Bird::fly(int hour){
-    Animal::energy;
-}
+
 
 Animal::Animal(int happiness, int energy, int fullness){
     this->happiness = (happiness);
@@ -87,12 +81,28 @@ void Animal::sleep(int hour){
     fullness -= (10 * hour);
     limitStat();
 }
+Bird::Bird(int happiness, int energy, int fullness) : Animal(happiness, energy, fullness){
+    this->happiness = happiness;
+    this->energy = energy;
+    this->fullness = fullness;
+    limitStat();
+}
 
+void Bird::fly(int hour){
+    if (hour < 0) hour = 0;
+    energy -= 5 *hour;
+    limitStat();
+}
+void Bird::sing(){
+    happiness += 5;
+    limitStat();
+}
 
 
 int main()
 {
     Animal a1(1000, 1000, 1000);
+    Bird b1(100, 100, 100);
     a1.play(-5);
     cout << "Energy : " << a1.getEnergy() << endl;
     cout << "Fullness : " << a1.getFullness() << endl;
@@ -104,12 +114,20 @@ int main()
     cout << "Energy : " << a1.getEnergy() << endl;
     cout << "Fullness : " << a1.getFullness() << endl;
     cout << "Happyness : " << a1.getHappiness() << endl;
-
+    
     a1.sleep(5);
     cout << endl;
     cout << endl;
     cout << "Energy : " << a1.getEnergy() << endl;
     cout << "Fullness : " << a1.getFullness() << endl;
     cout << "Happyness : " << a1.getHappiness() << endl;
+
+    b1.fly(1);
+    cout << endl;
+    cout << endl;
+
+    cout << "Energy : " << b1.getEnergy() << endl;
+    cout << "Fullness : " << b1.getFullness() << endl;
+    cout << "Happyness : " << b1.getHappiness() << endl;
 
 }
