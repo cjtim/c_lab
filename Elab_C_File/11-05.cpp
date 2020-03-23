@@ -21,16 +21,26 @@ public:
     void sleep(int);
 };
 
-class Bird : public Animal
+class Bird :public Animal
 {
 public:
-    Bird(int happiness, int energy, int fullness);
-    void fly(int hour);
+    Bird(int, int, int);
+    void fly(int);
     void sing();
 };
-
-
-
+class Pet {
+protected:
+    string name;
+public:
+    Pet(string);
+    string getName();
+    void setName(string);
+};
+class OwnedBird :public Bird, public Pet
+{
+public:
+    OwnedBird(string, int, int, int);
+};
 Animal::Animal(int happiness, int energy, int fullness){
     this->happiness = (happiness);
     this->energy = (energy);
@@ -97,37 +107,19 @@ void Bird::sing(){
     happiness += 5;
     limitStat();
 }
-
-
-int main()
-{
-    Animal a1(1000, 1000, 1000);
-    Bird b1(100, 100, 100);
-    a1.play(-5);
-    cout << "Energy : " << a1.getEnergy() << endl;
-    cout << "Fullness : " << a1.getFullness() << endl;
-    cout << "Happyness : " << a1.getHappiness() << endl;
-
-    
-    a1.eat(70);
-    cout << endl;
-    cout << "Energy : " << a1.getEnergy() << endl;
-    cout << "Fullness : " << a1.getFullness() << endl;
-    cout << "Happyness : " << a1.getHappiness() << endl;
-    
-    a1.sleep(5);
-    cout << endl;
-    cout << endl;
-    cout << "Energy : " << a1.getEnergy() << endl;
-    cout << "Fullness : " << a1.getFullness() << endl;
-    cout << "Happyness : " << a1.getHappiness() << endl;
-
-    b1.fly(1);
-    cout << endl;
-    cout << endl;
-
-    cout << "Energy : " << b1.getEnergy() << endl;
-    cout << "Fullness : " << b1.getFullness() << endl;
-    cout << "Happyness : " << b1.getHappiness() << endl;
-
+Pet::Pet(string name){
+    this->name = name;
+}
+string Pet::getName(){
+    return name;
+}
+void Pet::setName(string str){
+    name = str;
+}
+OwnedBird::OwnedBird(string str, int hap, int ener, int full)
+    :Bird(hap, ener, full), Pet(name){
+        name = str;
+        happiness = hap;
+        energy = ener;
+        fullness = full;
 }
